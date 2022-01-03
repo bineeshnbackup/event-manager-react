@@ -51,7 +51,7 @@ function EventList(props){
     
     return(
         <div className='events mt-5'>
-            <h2>Event Deatails</h2>
+            <h2>Event Details</h2>
             <Card >
                 <div className='row'>
                     <div className='form-group col-md-3  mb-4'>

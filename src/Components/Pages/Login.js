@@ -112,7 +112,7 @@ function Login(){
 								<button className='btn btn-primary btn-block login__card__button mb-1' type='button' onClick={(e)=>signUp(e)}>Sign Up</button>
 							</div>
 							<div className='d-flex align-items-center justify-content-center pb-4'>
-								<p className='mb-0 me-2'>Don you have an account?
+								<p className='mb-0 me-2'>Do you have an account?
                                     <span onClick={()=>setHasAccount(true)}>Sign In</span>
                                 </p>
 							</div>
@@ -120,7 +120,7 @@ function Login(){
 					)}
                 </form>
 				<div className='text-center pt-1 mb-5 pb-1'>
-					<button className='btn btn-outline-danger' type='button' onClick={()=>skipLoginHandler()}>Skip Login</button>
+					<button className='btn btn-outline-danger' type='button' onClick={()=>skipLoginHandler()}>Guest Login</button>
 				</div>
             </Card>
         </div>
