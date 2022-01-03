@@ -1,0 +1,7 @@
+.event__form button,
+.event__form button:hover {
+	background: #603bbb;
+	color: #fff;
+	cursor: pointer;
+	width: 100%;
+	}

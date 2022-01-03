@@ -1,0 +1,17 @@
+.event-list {
+    list-style: none;
+    padding: 0;
+}
+
+.event-list__noEvent {
+    color: red;
+    text-align: center;
+}
+
+.events button,
+.events button:hover {
+    background: #603bbb;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+}

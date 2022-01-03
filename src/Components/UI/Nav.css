@@ -1,0 +1,23 @@
+.nav{
+    background-color: #111;
+    display: block;
+    color: #fff;
+    height: 70px;
+    left: 0;
+    overflow: hidden;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.nav__contents{
+    display: flex;
+    justify-content: space-between;
+}
+.nav__contents button,
+.nav__contents button:hover{
+    background: #603bbb;
+    color: #fff;
+    cursor: pointer;
+}
