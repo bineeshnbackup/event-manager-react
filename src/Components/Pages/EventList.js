@@ -55,7 +55,7 @@ function EventList(props){
             <Card >
                 <div className='row'>
                     <div className='form-group col-md-3  mb-4'>
-                        <label>Filter By Category:&nbsp; </label> 
+                        <label>Filter By Category :</label> 
                         <select className='form-control'value={filterWord} 
                         onChange={(e)=>{
                             setFilter(e.target.value);
@@ -68,15 +68,15 @@ function EventList(props){
                         </select>
                     </div>
                     <div className='form-group col-md-6  row'>
-                        <label>Filter By Date (From-To):&nbsp; </label> 
+                        <label>Filter By Date :</label> 
                         <div className='form-group col-md-6  mb-4'>
-                            <input type='date' className='form-control' id='startDate' placeholder='Start date' min= {todayDate} max={maxDate} value={startDate} 
+                            <input  className='form-control' onFocus={(e) => (e.currentTarget.type = "date")} onBlur={(e) => (e.currentTarget.type = "text")} id='startDate' placeholder='From' min= {todayDate} max={maxDate} value={startDate} 
                             onChange={(e)=>{
                                 setStartDate(e.target.value);
                             }}/>
                         </div>
                         <div className='form-group col-md-6  mb-4'>
-                            <input type='date' className='form-control' id='endDate' placeholder='End date' min= {startDate} max={maxDate} value={endDate} 
+                            <input  className='form-control' onFocus={(e) => (e.currentTarget.type = "date")} onBlur={(e) => (e.currentTarget.type = "text")} id='endDate' placeholder='To' min= {startDate} max={maxDate} value={endDate} 
                             onChange={(e)=>{
                                 setEndDate(e.target.value);
                             }}/>

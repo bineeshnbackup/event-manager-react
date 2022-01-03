@@ -55,7 +55,7 @@ function EventForm(props){
     }
     return(
         <Card className='event__form h-100'>
-            <h2>Add New Event</h2>
+            <h3>Add New Event</h3>
             <form onSubmit={submitHandler}>
                 {errorMessage && <div className='alert alert-danger alert-dismissible fade show'>{errorMessage}</div>}
                 <div className='row'>
@@ -86,13 +86,13 @@ function EventForm(props){
                 </div>
                 <div className='row'>
                     <div className='form-group col-md-4  mb-4'>
-                        <input type='date' className='form-control' id='startDate' placeholder='Start date' min= {todayDate} max={maxDate} value={startDate} 
+                        <input className='form-control' onFocus={(e) => (e.currentTarget.type = "date")} onBlur={(e) => (e.currentTarget.type = "text")} id='startDate' placeholder='Start date' min= {todayDate} max={maxDate} value={startDate} 
                         onChange={(e)=>{
                             setStartDate(e.target.value);
                         }}/>
                     </div>
                     <div className='form-group col-md-4  mb-4'>
-                        <input type='date' className='form-control' id='endDate' placeholder='End date' min= {startDate} max={maxDate} value={endDate} 
+                        <input  className='form-control' onFocus={(e) => (e.currentTarget.type = "date")} onBlur={(e) => (e.currentTarget.type = "text")} id='endDate' placeholder='End date' min= {startDate} max={maxDate} value={endDate} 
                         onChange={(e)=>{
                             setEndDate(e.target.value);
                         }}/>
@@ -106,7 +106,7 @@ function EventForm(props){
                 </div>
                 <div className='row'>
                     <div className='form-group col-md-4 d-inline-flex  mb-4'>
-                        <label>Published:&nbsp; </label> 
+                        <label>Published :&nbsp; </label> 
                         <div className='form-check'>
                             <input className='form-check-input' type='radio' name='published' id='published1' value='Yes' checked={published=='Yes'}
                             onChange={(e)=>{
@@ -123,7 +123,7 @@ function EventForm(props){
                         </div>
                     </div>
                     <div className='form-group col-md-4 d-inline-flex  mb-4'>
-                        <label>Paid:&nbsp; </label> 
+                        <label>Paid :&nbsp; </label> 
                         <div className='form-check'>
                             <input className='form-check-input' type='radio' name='paid' id='paid1' value='Yes'checked={paid=='Yes'}
                             onChange={(e)=>{

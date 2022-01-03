@@ -23,7 +23,7 @@ const DUMMY_EVENT = [
         title: 'Birth Day Party',
         description: 'Vivamus ridiculus molestie, auctor semper. Adipiscing, phasellus nibh cras consectetuer praesent. Odio imperdiet ipsum senectus tellus. Venenatis, ante etiam. In.',
         location: 'Home',
-        startDate: '2022-06-38',
+        startDate: '2022-06-08',
         endDate: '2022-06-08',
         image:'https://th.bing.com/th/id/R.a4268b4e19ddc84c44d1a8e4990fbdd2?rik=JhDcA%2bhMrUYNqw&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2fd%2fb%2fa%2f1261534-birthday-celebration-wallpaper-1920x1080-pc.jpg&ehk=QHjN4Y24jjax%2bh208v%2bn18eKgeR2vGb33TLTmqPuU7o%3d&risl=&pid=ImgRaw&r=0',
         category:'Birthday',
