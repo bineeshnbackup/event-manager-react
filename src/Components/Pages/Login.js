@@ -1,7 +1,7 @@
 
 import { useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from 'firebase/auth';
 import { auth } from '../../firebase';
 import Card from '../UI/Card';
 import './Login.css';
@@ -40,6 +40,7 @@ function Login(){
 			try {
 				await createUserWithEmailAndPassword(auth, email, password);
 					setHasAccount(true);
+					signOut(auth);
 					clearData();
 			} catch (error) {
 				setError(error.message);
@@ -108,7 +109,7 @@ function Login(){
 					):(
 						<>
 							<div className='text-center pt-1 mb-5 pb-1'>
-								<button className='btn btn-primary btn-block login__card__button mb-1' type='button' onClick={(e)=>signUp(e)}>Sign U</button>
+								<button className='btn btn-primary btn-block login__card__button mb-1' type='button' onClick={(e)=>signUp(e)}>Sign Up</button>
 							</div>
 							<div className='d-flex align-items-center justify-content-center pb-4'>
 								<p className='mb-0 me-2'>Don you have an account?
