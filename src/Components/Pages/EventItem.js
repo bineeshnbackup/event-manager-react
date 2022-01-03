@@ -18,8 +18,8 @@ function EventItem(props){
                                 {props.description}
                                 <p>From: {startMonth} To: {endMonth}</p>
                                 <p><span>Category:&nbsp;</span>{props.category}</p>
-                                <p><span>Published:&nbsp;</span>{props.published}</p>
-                                <p><span>Paid:&nbsp;</span>{props.paid}</p>
+                                <p><span>Published:&nbsp;</span>{props.published=='true'?'Yes':'No'}</p>
+                                <p><span>Paid:&nbsp;</span>{props.paid=='true'?'Yes':'No'}</p>
                             </div>
                             <div className='col-md-6 event-item__body__imgBlock'>
                                 <div className='col-sm-12'>

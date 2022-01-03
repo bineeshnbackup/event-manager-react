@@ -15,8 +15,8 @@ const DUMMY_EVENT = [
         endDate: '2023-01-01',
         image:'https://media.istockphoto.com/photos/dancing-in-club-picture-id504632572?k=6&m=504632572&s=170667a&w=0&h=9LwtxZcFSmODZwvdUami0bX0mjdxq8gyCHZGH-Fo_ZQ=',
         category:'Party',
-        published:'Yes',
-        paid:'Yes'
+        published:'true',
+        paid:'true'
     },
 	{
         id: 2,
@@ -27,8 +27,8 @@ const DUMMY_EVENT = [
         endDate: '2022-06-08',
         image:'https://th.bing.com/th/id/R.a4268b4e19ddc84c44d1a8e4990fbdd2?rik=JhDcA%2bhMrUYNqw&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2fd%2fb%2fa%2f1261534-birthday-celebration-wallpaper-1920x1080-pc.jpg&ehk=QHjN4Y24jjax%2bh208v%2bn18eKgeR2vGb33TLTmqPuU7o%3d&risl=&pid=ImgRaw&r=0',
         category:'Birthday',
-        published:'Yes',
-        paid:'No'
+        published:'true',
+        paid:'false'
     },
     {
         id: 3,
@@ -39,8 +39,8 @@ const DUMMY_EVENT = [
         endDate: '2022-01-01',
         image:'https://media.istockphoto.com/photos/dancing-in-club-picture-id504632572?k=6&m=504632572&s=170667a&w=0&h=9LwtxZcFSmODZwvdUami0bX0mjdxq8gyCHZGH-Fo_ZQ=',
         category:'Party',
-        published:'Yes',
-        paid:'Yes'
+        published:'true',
+        paid:'true'
     }
 ];
 

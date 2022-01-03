@@ -12,8 +12,8 @@ function EventForm(props){
     const [startDate,setStartDate]= useState('');
     const [endDate,setEndDate]= useState('');
     const [image,setImage]= useState('');
-    const [published,setPublished]= useState('Yes');
-    const [paid,setPaid]= useState('No');
+    const [published,setPublished]= useState('true');
+    const [paid,setPaid]= useState('false');
     const [description,setDescription]= useState('');
     const [errorMessage,setError]= useState('');
 
@@ -49,8 +49,8 @@ function EventForm(props){
         setStartDate('');
         setEndDate('');
         setImage('');
-        setPublished('Yes');
-        setPaid('No');
+        setPublished('true');
+        setPaid('false');
         setDescription('');
     }
     return(
@@ -86,13 +86,13 @@ function EventForm(props){
                 </div>
                 <div className='row'>
                     <div className='form-group col-md-4  mb-4'>
-                        <input className='form-control' onFocus={(e) => (e.currentTarget.type = "date")} onBlur={(e) => (e.currentTarget.type = "text")} id='startDate' placeholder='Start date' min= {todayDate} max={maxDate} value={startDate} 
+                        <input className='form-control' onFocus={(e) => (e.currentTarget.type = 'date')} onBlur={(e) => (e.currentTarget.type = 'text')} id='startDate' placeholder='Start date' min= {todayDate} max={maxDate} value={startDate} 
                         onChange={(e)=>{
                             setStartDate(e.target.value);
                         }}/>
                     </div>
                     <div className='form-group col-md-4  mb-4'>
-                        <input  className='form-control' onFocus={(e) => (e.currentTarget.type = "date")} onBlur={(e) => (e.currentTarget.type = "text")} id='endDate' placeholder='End date' min= {startDate} max={maxDate} value={endDate} 
+                        <input  className='form-control' onFocus={(e) => (e.currentTarget.type = 'date')} onBlur={(e) => (e.currentTarget.type = 'text')} id='endDate' placeholder='End date' min= {startDate} max={maxDate} value={endDate} 
                         onChange={(e)=>{
                             setEndDate(e.target.value);
                         }}/>
@@ -108,14 +108,14 @@ function EventForm(props){
                     <div className='form-group col-md-4 d-inline-flex  mb-4'>
                         <label>Published :&nbsp; </label> 
                         <div className='form-check'>
-                            <input className='form-check-input' type='radio' name='published' id='published1' value='Yes' checked={published=='Yes'}
+                            <input className='form-check-input' type='radio' name='published' id='published1' value={true} checked={published=='true'}
                             onChange={(e)=>{
                                 setPublished(e.target.value);
                             }}/>
                             <label className='form-check-label' forhtml='published1'>Yes</label>
                         </div>
                         <div className='form-check'>
-                            <input className='form-check-input' type='radio' name='published' id='published2' value='No' checked={published=='No'}
+                            <input className='form-check-input' type='radio' name='published' id='published2' value={false} checked={published=='false'}
                             onChange={(e)=>{
                                 setPublished(e.target.value);
                             }}/>
@@ -125,16 +125,16 @@ function EventForm(props){
                     <div className='form-group col-md-4 d-inline-flex  mb-4'>
                         <label>Paid :&nbsp; </label> 
                         <div className='form-check'>
-                            <input className='form-check-input' type='radio' name='paid' id='paid1' value='Yes'checked={paid=='Yes'}
+                            <input className='form-check-input' type='radio' name='paid' id='paid1' value={true} checked={paid=='true'}
                             onChange={(e)=>{
-                                setPublished(e.target.value);
+                                setPaid(e.target.value);
                             }}/>
                             <label className='form-check-label' forhtml='paid1'>Yes</label>
                         </div>
                         <div className='form-check'>
-                            <input className='form-check-input' type='radio' name='paid' id='paid2' value='NO' checked={paid=='No'}
+                            <input className='form-check-input' type='radio' name='paid' id='paid2' value={false} checked={paid=='false'}
                             onChange={(e)=>{
-                                setPublished(e.target.value);
+                                setPaid(e.target.value);
                             }}/>
                             <label className='form-check-label' forhtml='paid2'> No</label>
                         </div>
